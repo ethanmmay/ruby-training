@@ -1,0 +1,166 @@
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color:#353535;
+  background-image: url('../images/darkbackground.jpg');
+  color: #cccccc;
+}
+
+.rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+.charmonman {
+  font-family: 'Charmonman', sans-serif;
+}
+
+.zoom { transition: transform .2s; }
+
+.zoom:hover {
+transform: scale(1.5);
+transform-origin: left;
+ }
+ 
+.bodytext {
+  text-align: auto;
+  color: #cccccc;
+  font-size: 1.0em;
+  font-family: 'Rubik', sans-serif;
+}
+
+#clockDisplay {
+  text-decoration: bold;
+}
+
+.clearFloat {
+  clear: both;
+}
+
+#name {
+  text-decoration: underline;
+  color: #9b29eb;
+}
+
+.textchange {
+  text-align: center;
+  background-color: #ce9aee;
+  color: #514c90;
+  font-family: 'Charmonman', sans-serif;
+  font-size: 1.2em;
+}
+
+li {
+  font-size: 16pt;
+  text-align: left;
+}
+
+hr {
+  border: 4px ridge #9b29eb;
+}
+
+.floatLeft {
+  float: left;
+  padding: 25px;
+}
+
+.giflizard {
+  float: left;
+  padding: 25px;
+  margin-left: -30px;
+  margin-right: 10px;
+  position: sticky;
+}
+
+.clearFloat {
+  clear: both;
+}
+
+
+a:link {
+  color: #9b29eb;
+}
+
+a:hover {
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #9b29eb;
+  text-decoration: line-through;
+}
+
+.title { grid-area: header; }
+.logo { grid-area: menu; }
+.projects { grid-area: main; }
+.art { grid-area: art; }
+.info { grid-area: footer; }
+
+.grid-container {
+  background-color: #353535;
+  border: 6px solid #9b29eb;
+  border-radius: 10px;
+  box-shadow: 0px 0px 120px #9b29eb;
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 4fr 0.5fr 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'menu header header header header art'
+      'menu main  main   main   ...  art'
+      'menu ... footer footer footer art';
+  grid-gap: 10px;
+  background-color: #353535;
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.grid-container > div {
+  background-color: #303030;
+  border: 6px solid #9b29eb;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px #9b29eb;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 80em) {
+  .grid-container {
+    border: 6px solid #9b29eb;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+      'header header header'
+      'menu menu art'
+      'menu menu art'
+      'main main art'
+      'footer footer footer'
+
+  }
+}
+
+@media screen and (max-width: 40em) {
+
+.grid-container {
+  background-color: #000000;
+  border: 6px solid #9b29eb;
+  border-radius: 10px;
+  box-shadow: 5px 5px 40px #9b29eb;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  margin: 40px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+  'header'
+  'menu'
+  'main'
+  'art'
+  'footer'
+}
