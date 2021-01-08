@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Mouse Down Project</title>
+
+  <link rel='stylesheet' type='text/css' href='.css'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <script src='js/jquery-3.3.1.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='.js'></script>
+
+  <h1 id='mouseDown'>Mouse Down Project</h1>
+    <br><br><br>
+</head>
+<body>
+  <table>
+    <tbody>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <table>
+    <tbody>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+      <tr>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+        <td class='myClass'></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+$(document).ready(function() {
+  $('#mouseDown').mousedown(function(event) {
+    switch (event.which) {
+      case 1:
+        alert('Left Mouse button was pressed.');
+      break;
+      case 2:
+        alert('Middle Mouse button was pressed.');
+      break;
+      case 3:
+        alert('Right Mouse button was pressed.');
+      break;
+      default:
+        alert('what!');
+    }
+  });
+  $('.myClass').mousedown(function(event) {
+    switch (event.which) {
+      case 1:
+        /*alert('Left mouse button has been pressed');*/
+        $(this).addClass('Cell1');
+      break;
+      case 2:
+        /*alert('Middle mouse button has been pressed');*/
+        $(this).addClass('Cell2');
+      break;
+      case 3:
+        /*alert('Right mouse button has been pressed');*/
+        $(this).removeClass('Cell1');
+        $(this).removeClass('Cell2');
+      break;
+      default:
+        alert('A bug occured!');
+    }
+  });
+});
+
+body {
+  background-color: #;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  background-color: #;
+  border: 3px solid #;
+  border-spacing: 20px;
+}
+
+tr {
+  border: 3px solid #;
+  background-color: #;
+}
+
+td {
+  border: 3px solid #;
+  background-color: #;
+  padding: 100px;
+}
+
+.Cell1 {
+  background-color: #;
+  border: 5px solid #;
+}
+
+.Cell2 {
+  background-color: #;
+  border: 5px solid #;
+}
+
+
+
+

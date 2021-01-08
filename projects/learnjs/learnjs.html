@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel="stylesheet" href="css/learnjs.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+  <script src='js/jquery-3.3.1.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='js/learnjs.js'></script>
+  <script src="js/myscript.js"></script>
+  <title>Learning JS</title>
+</head>
+
+<body>
+  <h1 class="gfont">Welcome to my Learning JavaScript Page! - Made by Ethan May</h1>
+  <button type="button" onclick="document.getElementById('myTime').innerHTML = Date()" class="gfont">
+    Click me to display Date and Time.</button>
+    <button type="button" onclick="document.getElementById('myTime').innerHTML = ''" class="gfont">
+      Click me to hide Date & Time.</button>
+  <p id="myTime" class="gfont"></p>
+  <br><hr class="hrstyle"><br>
+  <button type="button" onclick='document.getElementById("textChange").innerHTML = "UGLY"' class="gfont">Click Me To Change Text</button>
+  <button type="button" onclick='document.getElementById("textChange").innerHTML = ""' class="gfont">Click Me To Hide Text</button>
+  <p id="textChange" class="gfont">Javascript is ... - Ethan May 2k18</p>
+  <br><hr class="hrstyle"><br>
+  <button onclick="document.getElementById('myImage').src='images/pic_bulbon.png'" class="gfont">Turn on the light</button>
+  <img id="myImage" src="images/pic_bulboff.png" style="width:100px">
+  <button onclick="document.getElementById('myImage').src='images/pic_bulboff.png'" class="gfont">Turn off the light</button>
+
+  <br><hr class=hrstyle><br>
+
+<table><tbody><h1 class="gfont"> Action Pictures </h1>
+  <tr>
+  <th><img src="images/pic1.JPG" alt="Picture Unavailable Due to Bandwidth Issues" id="pic1"></img><button id="1pic" style="floatt" >Show Pic1</button></th>
+  <th><img src="images/pic2.JPG" alt="Picture Unavailable Due to Bandwidth Issues" id="pic2"></img><button id="2pic" style="floatt">Show Pic2</button></th>
+  <th><img src="images/pic3.JPG" alt="Picture Unavailable Due to Bandwidth Issues" id="pic3"></img><button id="3pic" style="floatt">Show Pic3</button></th>
+</tr><tr>
+  <th><img src="images/pic4.JPG" alt="Picture Unavailable Due to Bandwidth Issues" id="pic4"></img><button id="4pic" style="floatt">Show Pic4</button></th>
+  <th><img src="images/pic5.JPG" alt="Picture Unavailable Due to Bandwidth Issues" id="pic5"></img><button id="5pic" style="floatt">Show Pic5</button></th>
+  <th><img src="images/pic6.JPG" alt="Picture Unavailable Due to Bandwidth Issues" id="pic6"></img><button id="6pic" style="floatt">Show Pic6</button></th>
+</tbody></table>
+
+  <br><hr style="hrstyle"><br>
+
+  <h2 style="gfont">External JavaScript</h2>
+  <p id="extJavascript" style="gfont">Practicing External JavaScript</p>
+  <button type="button" onclick="myFunction()">Try it</button>
+  <p>(myFunction is stored in an external file called "myScript.js")</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

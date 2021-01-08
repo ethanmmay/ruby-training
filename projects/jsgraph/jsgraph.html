@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jsgraph.css">
+    <script src="js/jsgraph.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <h1 class="gfont" align="center">JSGraph by Ethan May on February 7, 2019</h1>
+</head>
+<body onLoad="init()">
+        <h2 class="gfont">Annual Viewership of Sport Events (Millions) from Year 2011-2018</h2>
+    <div id="graph" height="auto" width="750px" align="center"><br><br>
+        <div id="table" height="auto" width="750px">
+        <table id="values">
+            <tr>
+                <td> </td>
+                <td>2011</td>
+                <td>2012</td>
+                <td>2013</td>
+                <td>2014</td>
+                <td>2015</td>
+                <td>2016</td>
+                <td>2017</td>
+                <td>2018</td>
+                <td rowspan="4" id="submit">
+                    <button type="button" id="updateTable" class="gfont" onclick= "updateTable()">Update Graph</button> 
+                </td>
+            </tr>
+            <tr>
+                <td style="color: #ff3a5b">LoL Worlds</td>
+                <td><input type="number" id="worlds1" class="Worlds"></input></td>
+                <td><input type="number" id="worlds2" class="Worlds"></input></td>
+                <td><input type="number" id="worlds3" class="Worlds"></input></td>
+                <td><input type="number" id="worlds4" class="Worlds"></input></td>
+                <td><input type="number" id="worlds5" class="Worlds"></input></td>
+                <td><input type="number" id="worlds6" class="Worlds"></input></td>
+                <td><input type="number" id="worlds7" class="Worlds"></input></td>
+                <td><input type="number" id="worlds8" class="Worlds"></input></td>
+            </tr>
+            <tr>
+                <td style="color: #ffd06d">SuperBowl</td>
+                <td><input type="number" id="super1" class="Super"></input></td>
+                <td><input type="number" id="super2" class="Super"></input></td>
+                <td><input type="number" id="super3" class="Super"></input></td>
+                <td><input type="number" id="super4" class="Super"></input></td>
+                <td><input type="number" id="super5" class="Super"></input></td>
+                <td><input type="number" id="super6" class="Super"></input></td>
+                <td><input type="number" id="super7" class="Super"></input></td>
+                <td><input type="number" id="super8" class="Super"></input></td>
+            </tr>
+            <tr>
+                <td style="color: #82e5e2">NBA Finals</td>
+                <td><input type="number" id="nba1" class="NBA"></input></td>
+                <td><input type="number" id="nba2" class="NBA"></input></td>
+                <td><input type="number" id="nba3" class="NBA"></input></td>
+                <td><input type="number" id="nba4" class="NBA"></input></td>
+                <td><input type="number" id="nba5" class="NBA"></input></td>
+                <td><input type="number" id="nba6" class="NBA"></input></td>
+                <td><input type="number" id="nba7" class="NBA"></input></td>
+                <td><input type="number" id="nba8" class="NBA"></input></td>
+            </tr>
+        </table></div><br><hr><br> <!--
+        <select id="event" name="Event Selector" align="center">
+            <option value="0">All</option>
+            <option value="LeagueWorlds">LoL Worlds</option>
+            <option value="SuperBowl">NFL Superbowl</option>
+            <option value="NBAFinals">NBA Finals</option>
+        </select>
+        <select id="year" name="Date Selector" align="center">
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+        </select>
+        <input type="text" id="input"></input>
+        <button type="button" onclick= "update()">Update Graph</button><br><br><hr> -->
+        <div id="plane" height="auto" width="650px" align="center">
+        <canvas id="canvas" height="800" width="1300">
+        </canvas><br>
+        
+        <span style="color:#ff3a5b; font-size: 2em; outline-color: #ffffff80;"> LoL Worlds</span>
+        <span style="color:#ffd06d; font-size:2em; outline-color: #ffffff80;"> NFL Superbowl</span>
+        <span style="color: #82e5e2; font-size:2em; outline-color: #ffffff80;"> NBA Finals </span>
+    </div></div>
+</body>
+</html>

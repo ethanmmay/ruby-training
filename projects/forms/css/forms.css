@@ -1,0 +1,127 @@
+body {
+  background-image: url('../images/marble.jpeg');
+}
+.formLabels {
+  color: #0000FF;
+}
+h1 {
+  color: #5364ff;
+  font-family: 'Indie Flower', cursive;
+}
+h3 {
+  color: #5364ff;
+  font-family: 'Indie Flower', cursive;
+}
+h4 {
+  color: #5364ff;
+  font-family: 'Indie Flower', cursive;
+}
+li {
+  color: #5364ff;
+  font-family: 'Indie Flower', cursive;
+}
+#solve {
+  color: #510091;
+  text-decoration: underline;
+}
+#theClass {
+  border: 2px solid teal;
+  margin: 0px;
+  background-color: #20d7b7;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em
+}
+#theTeacher {
+
+  box-sizing: border-box;
+  border: 2px solid teal;
+  border-radius: 4px;
+  background-color: #20d7b7;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em
+}
+#theUnit {
+
+  box-sizing: border-box;
+  border: 2px solid teal;
+  border-radius: 4px;
+  background-color: #20d7b7;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em
+}
+#theKey {
+
+  box-sizing: border-box;
+  border: 2px solid teal;
+  border-radius: 4px;
+  background-color: #20d7b7;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em
+}
+#Submit {
+  background-color: #505d9f;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.theClass {
+  font-family:  'Indie Flower', cursive;
+  font-size: 24px;
+  color: #5364ff;
+  padding: none;
+}
+.theTeacher {
+  font-family:  'Indie Flower', cursive;
+  font-size: 24px;
+  color: #5364ff;
+  padding: none;
+}
+.theUnit {
+  font-family:  'Indie Flower', cursive;
+  font-size: 24px;
+  color: #5364ff;
+  padding: none;
+}
+.theKey {
+  font-family:  'Indie Flower', cursive;
+  font-size: 24px;
+  color: #5364ff;
+  padding: none;
+}
+.root1 {
+  font-family:  'Indie Flower', cursive;
+  font-size: 24px;
+  color: #5364ff;
+  padding: none;
+}
+.root2 {
+  font-family:  'Indie Flower', cursive;
+  font-size: 24px;
+  color: #5364ff;
+  padding: none;
+}
+#root1 {
+  border: 2px solid teal;
+  margin: 0px;
+  background-color: #20d7b7;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em
+}
+#root2 {
+  border: 2px solid teal;
+  margin: 0px;
+  background-color: #20d7b7;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.5em
+}

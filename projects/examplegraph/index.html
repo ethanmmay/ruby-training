@@ -1,0 +1,72 @@
+<html>
+
+<head>
+        <meta charset="UTF-8"> 
+    <style>
+        html{
+            font-family:Verdana;
+        }
+        input[type=text] {
+            font-size: 1.2em;
+            border: 2px solid red;
+            border-radius: 4px;
+            background-color: cyan;
+        }
+input[type='text']:hover {
+    box-shadow: 10px 10px gray;
+}
+
+input[type='text']:focus {
+    background-color: pink;
+}
+        </style>
+    <script src="js/graph.js"></script>
+
+</head>
+
+<body onload="init()">
+    <div align="center">
+        <h2>Monthly Profits of Idaho Companies(in $Millions)</h2>
+        <h3>(These numbers are not real, they are for JavaScript graphing practice!) </h3>
+
+        <select id="company" value="" name="">
+            <option value="">Select Company</option>
+            <option value="Albertsons">Alberstons</option>
+            <option value="IdaCorp">IdaCorp</option>
+            <option value="Micron">Micron</option>
+        </select>
+
+        <select id="month" value="" name="">
+            <option value="">Select Month</option>
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option value="Mar">March</option>
+            <option value="Apr">April</option>
+            <option value="May">May</option>
+            <option value="Jun">June</option>
+            <option value="Jul">July</option>
+            <option value="Aug">August</option>
+            <option value="Sep">September</option>
+            <option value="Oct">October</option>
+            <option value="Nov">November</option>
+            <option value="Dec">December</option>
+        </select>
+
+
+
+        <input type="text" id="profit" placeholder="Enter Profit $Millions">
+        <button type="button" onclick="update()">Update Graph</button>
+        <br>
+
+
+        <canvas id="canvas" height="400" width="650">
+        </canvas>
+        <br>
+        <!--Legends for Dataplot -->
+        <span style="color:#FF0066"> Albertsons </span>
+        <span style="color:#9933FF"> IdaCorp</span>
+        <span style="color:#000"> Micron </span>
+    </div>
+</body>
+
+</html>

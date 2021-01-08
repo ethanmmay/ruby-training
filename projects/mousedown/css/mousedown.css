@@ -1,0 +1,32 @@
+body {
+  background-color: #b5f1ed;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-spacing: 20px;
+}
+
+tr {
+  border: 3px solid #000000;
+  background-color: #000000;
+}
+
+td {
+  border: 3px solid #000000;
+  background-color: #f27eee;
+  padding: 100px;
+}
+
+.bbCell {
+  background-color: #000000;
+  border: 5px solid #000000;
+}
+
+.ppCell {
+  background-color: #ffffff;
+  border: 5px solid #000000;
+}

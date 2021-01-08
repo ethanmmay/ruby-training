@@ -1,0 +1,12 @@
+body { background-color: #f16ee4; }
+
+.zoom { transition: transform .2s; }
+
+.zoom:hover {
+transform: scale(1.5);
+transform-origin: left;
+ }
+
+#changeImage { align-items: center; }
+
+.center { align-items: center; }

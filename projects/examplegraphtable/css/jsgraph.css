@@ -1,0 +1,98 @@
+body {
+    background-image: url('../images/background.jpeg');
+    font-family: 'Indie Flower', cursive;
+}
+
+
+.gfont {
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+
+select,button {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.Worlds {
+    border: 0px solid #000000;
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #ff3a5b80;
+    color: #000000;
+    font-family: 'Indie Flower', cursive;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.Worlds[type=number]:focus {
+    border: 2px solid #ff3a5b;
+    outline: 0;
+}
+
+.Super {
+    border: 0px solid #000000;
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #ffd06d80;
+    color: #000000;
+    font-family: 'Indie Flower', cursive;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.Super[type=number]:focus {
+    border: 2px solid #ffd06d;
+    outline: 0;
+}
+
+.NBA {
+    border: 0px solid #000000;
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #82e5e280;
+    color: #000000;
+    font-family: 'Indie Flower', cursive;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.NBA[type=number]:focus {
+    border: 2px solid #82e5e2;
+    outline: 0;
+}
+  
+#input {
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: #dddddd;
+}
+
+#updateTable {
+    height: 125px;
+    width: auto;
+    background-color: #00000000;
+    border: 0px solid #000000;
+    text-align: center;
+    color: #000000;
+    font-size: 14pt;
+}
+
+#values {
+    border: 1px solid #00000000;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #00000000;
+}
+
+td {
+    border: 1px solid #000000;
+    margin: 2px;
+    background-color: #00000000;
+    text-align: center;
+    color: #000000;
+    font-size: 14pt;
+    padding: 2px;
+}
