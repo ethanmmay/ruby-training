@@ -1,0 +1,20 @@
+body {
+    background-image: url('../images/backg.jpg');
+}
+
+h1, h2, h3 {
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+.gfont {
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+#githublogo {
+    border: 1px solid black;
+}
+
+li {
+    size: 20px;
+    font-family: 'Macondo Swash Caps', cursive;
+}

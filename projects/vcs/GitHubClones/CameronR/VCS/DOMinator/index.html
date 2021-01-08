@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <title>DOMinator</title>
+</head>
+<body>
+    <h1>DOMinator</h1>
+    <h5>Made by Cameron Roberts</h5>
+    <h5>April 2019</h5>
+    <div id="created_div"></div>
+    <div id="wrap">
+        <div class="card bg-dark m-auto w-75">
+            <h5 class="card-header text-light">
+                <span class="h1 text-warning font-italic mr-2">JavaScript</span>
+                DOMinator
+                <span id='x' class="btn btn-sm btn-danger float-right" onclick='hide()'>X</span>
+            </h5>
+            <div class="card-body row">
+                <div class="input-group">
+                    <input type="text" class="col-3" placeholder="Tag Name" >
+                    <input id='className'       type="text" class="col-6"  placeholder="Class Name">
+                    <input id="backgroundColor" type="text" class="col-3"  placeholder='Background color (RGB)'>
+                    <input id='id'              type="text" class="col-6"  placeholder="ID">
+                    <input id='ID'              type="text" class="col-6"  placeholder="Parent ID">
+                    <input id='innerHTML'       type="text" class="col-12" placeholder="Inner HTML">
+                </div>
+                <div class="btn-grou mt-4">
+                    <span onclick='create()' class="btn btn-warning ml-4 mr-4">Create New Element</span>
+                    <span onclick='remove()' class="btn btn-danger mr-4">Remove Last Element</span>
+                    <span onclick='reset()' class="btn btn-outline-secondary">Reset</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src='js/js.js'></script>
+</body>
+</html>

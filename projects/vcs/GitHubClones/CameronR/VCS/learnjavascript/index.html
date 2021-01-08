@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn JavaScript</title>
+  <link rel="stylesheet" href="css/learnjavascript.css">
+  <link rel="stylesheet" href="js/jq.js">
+  <script src="js/jq.js"></script>
+  <script src="js/myScript.js"></script>
+</head>
+<style>
+  .img11 {
+  grid-area: img1;
+}
+
+.img21 {
+  grid-area: img2;
+}
+
+.img31 {
+  grid-area: img3;
+}
+
+.img41 {
+  grid-area: img4;
+}
+
+.img51 {
+  grid-area: img5;
+}
+
+.img61 {
+  grid-area: img6;
+}
+</style>
+
+<body>
+  <h1>Welcome to my Learn JavaScript page - Created by Cameron Roberts.</h1>
+
+  <br>
+  <hr><br>
+
+  <button type="button" onclick="document.getElementById('myTime').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+  <button type="button" onclick="document.getElementById('myTime').innerHTML = ''">
+    Click me to hide Date and Time.</button>
+
+  <p id="myTime"></p>
+
+  <br>
+  <hr><br>
+
+  <h2>What can Javascript do?</h2>
+
+  <p id="changeHTML">Javascript can change HTML content.</p>
+
+  <button id='original' type="button" onclick='document.getElementById("changeHTML").innerHTML = "Hello Javascript!"'>Click Me!</button>
+  <button id='restore' type="button" onclick='document.getElementById("changeHTML").innerHTML = "Javascript can change HTML content."'>Click Me Again!</button>
+
+  <br>
+  <hr><br>
+
+  <h2>What Can JavaScript Do?</h2>
+
+  <p>JavaScript can change HTML attribute values.</p>
+
+  <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+  <button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
+
+  <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+  <button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
+
+  <br>
+  <hr><br>
+  <table>
+    <div class='img1'>
+    <td class='img1'>
+      <button onclick="document.getElementById('img1').src=''">Click to hide picture 1</button>
+      <button onclick="document.getElementById('img1').src='images/temple.jpg'">Click to show picture 1</button>
+      <img class="img1" id="img1" src="images/temple.jpg" width="250">
+    </td>
+  </div>
+  <div class='img2'>
+    <td class='img2'>
+      <button onclick="document.getElementById('img2').src=''">Click to hide picture 2</button>
+      <button onclick="document.getElementById('img2').src='images/templereflection.jpg'">Click to show picture 2</button>
+      <img class="img2" id="img2" src="images/templereflection.jpg" width="250">
+    </td>
+  </div>
+  <div class='img3'>
+    <td class='img3'>
+      <button onclick="document.getElementById('img3').src=''">Click to hide picture 3</button>
+      <button onclick="document.getElementById('img3').src='images/canyoneering.jpg'">Click to show picture 3</button>
+      <img class="img3" id="img3" src="images/canyoneering.jpg" width="250">
+    </td>
+  </div>
+  <div class='img4'>
+    <td class='img4'>
+      <button onclick="document.getElementById('img4').src=''">Click to hide picture 4</button>
+      <button onclick="document.getElementById('img4').src='images/mountainview.jpg'">Click to show picture 4</button>
+      <img class="img4" id="img4" src="images/mountainview.jpg" width="250">
+    </td>
+  </div>
+  <div class='img5'>
+    <td class='img5'>
+      <button onclick="document.getElementById('img5').src=''">Click to hide picture 5</button>
+      <button onclick="document.getElementById('img5').src='images/skyview.jpg'">Click to show picture 5</button>
+      <img class="img5" id="img5" src="images/skyview.jpg" width="250">
+    </td>
+  </div>
+  <div class='img6'>
+    <td class='img6'>
+      <button onclick="document.getElementById('img6').src=''">Click to hide picture 6</button>
+      <button onclick="document.getElementById('img6').src='images/friendgroup.jpg'">Click to show picture 6</button>
+      <img class="img6" id="img6" src="images/friendgroup.jpg" width="250">
+    </td>
+  </div>
+</table>
+  <br>
+  <hr><br>
+
+  <h2>External JavaScript</h2>
+
+  <p id="extJavaScript">Learning external JavaScript.</p>
+
+  <button type="button" onclick="myFunction()">Try it</button>
+
+  <p>(myFunction is stored in an external file called "js/myScript.js")</p>
+
+  <br>
+  <hr><br>
+
+  <br><hr><br>
+
+  <canvas id="myCanvas" height='400px' width='1700px' style="border:5px solid rgb(109, 214, 35);">
+  Your browser does not support the HTML5 canvas tag.
+  </canvas>
+
+<br><hr><br>
+
+  <h2>Graded!  Using HTML5 Canvas, make a Frosty the Snowman!</h2>
+  <canvas id="Frosty" height='1200px' width='1200px' style="border:5px solid rgb(109, 214, 35); background-color: rgb(50,50,50)">
+  Your browser does not support the HTML5 canvas tag.
+  </canvas>
+
+  <script>
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#00FF00";
+  ctx.fillRect(100,100,300,150)
+
+  ctx.fillStyle = "#0000FF";
+  ctx.fillRect(1000,100,300,150)
+
+  ctx.moveTo(1700,0);
+  ctx.lineTo(0,400);
+  ctx.stroke();
+
+  ctx.moveTo(0,0);
+  ctx.lineTo(1700,400);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(850,200,150,0,2*Math.PI);
+  ctx.stroke();
+  ctx.fillStyle = "#FFFF00";
+  ctx.beginPath();
+  ctx.arc(850,200,80,0,1.5*Math.PI);
+  ctx.stroke();
+
+  ctx.moveTo(850,200);
+  ctx.lineTo(930,200);
+  ctx.stroke();
+  ctx.moveTo(850,200);
+  ctx.lineTo(850,120);
+  ctx.stroke();
+
+  ctx.fillStyle = "#FFFF00";
+  ctx.beginPath();
+  ctx.arc(890,160,20,0,2*Math.PI);
+  ctx.fill();
+
+  var canvas = document.getElementById("Frosty");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = '#734100'
+  ctx.lineWidth = 10;
+  ctx.moveTo(800, 450)
+  ctx.lineTo(1000, 400)
+  ctx.stroke()
+
+  ctx.moveTo(400, 450)
+  ctx.lineTo(200, 400)
+  ctx.stroke()
+
+  ctx.moveTo(1000, 400)
+  ctx.lineTo(1100, 250)
+  ctx.stroke()
+
+  ctx.moveTo(200, 400)
+  ctx.lineTo(100, 250)
+  ctx.stroke()
+
+
+  ctx.fillStyle = "#FFFFFF";
+
+  ctx.beginPath();
+  ctx.arc(600,800,300,0,2*Math.PI);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(600,450,200,0,2*Math.PI);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(600,200,100,0,2*Math.PI);
+  ctx.fill();
+
+  ctx.fillStyle = "rgb(255, 134, 34)";
+  ctx.beginPath();
+  ctx.arc(600,212,10,0,2*Math.PI);
+  ctx.fill();
+
+  ctx.fillStyle = "#000000"
+  ctx.beginPath();
+  ctx.arc(550,175,10,0,2*Math.PI);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(650,175,10,0,2*Math.PI);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(600,400,10,0,2*Math.PI);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(600,500,10,0,2*Math.PI);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(600,600,10,0,2*Math.PI);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(600,700,10,0,2*Math.PI);
+  ctx.fill();
+
+  ctx.fillStyle = '#734100'
+  ctx.fillRect(350, 1100, 500, 100)
+
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.arc(600, 220, 50, 45, .7*Math.PI);
+  ctx.stroke();
+
+  ctx.fillStyle = '#000000'
+  ctx.lineWidth = 1;
+  ctx.moveTo(590, 225);
+  ctx.lineTo(590, 235);
+  ctx.stroke();
+
+
+  ctx.moveTo(593, 225);
+  ctx.lineTo(593, 235);
+  ctx.stroke();
+
+
+  ctx.moveTo(596, 225);
+  ctx.lineTo(596, 235);
+  ctx.stroke();
+
+  ctx.moveTo(599, 225);
+  ctx.lineTo(599, 235);
+  ctx.stroke();
+
+
+  ctx.moveTo(602, 225);
+  ctx.lineTo(602, 235);
+  ctx.stroke();
+
+
+  ctx.moveTo(605, 225);
+  ctx.lineTo(605, 235);
+  ctx.stroke();
+
+  ctx.moveTo(608, 225);
+  ctx.lineTo(608, 235);
+  ctx.stroke();
+
+  ctx.moveTo(611, 225);
+  ctx.lineTo(611, 235);
+  ctx.stroke();
+  </script>
+</body>
+
+</html>

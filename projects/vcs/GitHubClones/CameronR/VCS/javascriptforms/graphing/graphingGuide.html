@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="home.css">
+  <title>Graphing</title>
+  <script src="../js/forms.js">
+  </script>
+</head>
+<body>
+  <h3>Solve using factoring:
+  <p>x<sup>2</sup>+8x+12</p></h3>
+  <ol>
+    <li>Find all the factors(x+2 and x+6)</li>
+    <br>
+    <li>To find the x intercepts, set each factor to (factor)=0</li>
+    <br>
+    <li>So, it would be x+2=0 and x+6=0, which are x=-2 and x=-6</li>
+    <br>
+    <li>So the graph vertex(peak) is on the left of the y-axis</li>
+    <br>
+    <li>The point in the middle is x=-4, so plug -4 in for x.</li>
+    <br>
+    <li>-4<sup>2</sup>+8*(-4) +12 = -4</li>
+    <br>
+    <li>This means the graph is opening upwards.</li>
+    <br>
+    <li>This is what the graph looks like:</li>
+    <br>
+    <img src="images/graph.png" width="500px">
+  </ol>
+  <hr>
+</body>
+<form>
+  <h3 class="formLabels">Click here for a quadratic formula walk-through:</h3>
+    <input type="button" value="Submit" onclick="quadMove()">
+
+  <h3 class="formLabels">Click here for a completing the square formula walk-through:</h3>
+    <input type="button" value="Submit" onclick="compMove()">
+
+  <h3 class="formLabels">Click here for a factoring walk-through:</h3>
+    <input type="button" value="Submit" onclick="factMove()">
+</form>
+</html>

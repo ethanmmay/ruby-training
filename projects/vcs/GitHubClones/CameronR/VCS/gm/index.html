@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/gm.css">
+    <script src='js/gm.js'></script>
+    <title>Good Morning</title>
+</head>
+<body>
+    <h1>Good Morning?</h1>
+    <h5>By Cameron Roberts</h5>
+    <h5>April 2019</h5>
+</body>
+<script>
+    let getBody = document.body;
+    let newElement = document.createElement('h1');
+    let date = new Date();
+    let currentHour = date.getHours();
+    let createTxtMsg;
+    if(currentHour >= 4 && currentHour < 10){
+        createTxtMsg = "Good Morning!";
+    }
+    else if(currentHour >= 10 && currentHour < 12) {
+        createTxtMsg = 'Good Day!';
+    }
+    else if(currentHour >= 18 && currentHour < 22){
+        createTxtMsg = 'Good Evening!';
+    }
+    else if(currentHour >= 22 || currentHour < 4) {
+        createTxtMsg = 'Good Night!';
+    }
+    else{
+        createTxtMsg = "Good {enter user's time here}! ;-)";
+    }
+
+    let createEleTxt = document.createTextNode(createTxtMsg)
+    newElement.appendChild(createEleTxt);
+    console.log(getBody)
+    getBody.appendChild(newElement);
+    newElement.setAttribute("class",'welcome')
+    newElement.style.cssText = "text-align:center;font-size:25px;font-family:Verdona;"
+</script>
+</html>

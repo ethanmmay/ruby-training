@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url('img_parallax.jpg');
+
+            /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Canyoneering</h1>
+    <h5>By Cameron Roberts</h5>
+    <h5>May 2019</h5>
+    <br>
+    <p>Scroll Up and Down this page to see the parallax scrolling effect.</p>
+
+    <div class="parallax"></div>
+
+    <div style="background-color:red;font-size: 40px" class='indieFlower'>
+        This image is when my family and I went on a canyoneering trip to Moab, Utah.  I was about to go down a 98 foot rappel.  
+        It was really fun, and I hope I can go again soon!  My entire family went, including some cousins and an aunt.  You should try it sometime!
+    </div>
+
+    <div class="parallax"></div>
+
+</body>
+
+</html>

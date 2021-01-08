@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        p {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+        }
+    </style>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        p {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 100px;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url('img_parallax.jpg');
+
+            /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Count Down</h1>
+    <h5>By Cameron Roberts</h5>
+    <h5>May 2019</h5>
+    <br>
+    <div class="parallax">
+        <p id="demo"></p>
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("May 31, 2019 10:52:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function () {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Output the result in an element with id="demo"
+                document.getElementById("demo").innerHTML = days + " days " + hours + " hours " +
+                    minutes + " minutes and " + seconds + " seconds until school is out!";
+                document.getElementById("demo").style.backgroundColor = 'rgba(125, 125, 125, .5)';
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "SCHOOL IS OUT!!!!";
+                }
+            }, 100);
+        </script>
+
+    </div>
+
+</body>
+
+</html>

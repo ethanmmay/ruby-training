@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        .parallax {
+            /* The image used */
+            background-image: url('img_parallax.jpg');
+
+            /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+        @media only screen and (max-device-width: 1366px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 17px;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .content {
+            position: absolute;
+            bottom: -1100;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .content2 {
+            position: absolute;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="video_parallax.mp4" style='width: 100%; height: 100%;' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="content2">
+        <h1>Canyoneering</h1>
+        <h5>By Cameron Roberts</h5>
+        <h5>May 2019</h5>
+        <br>
+        <p>Scroll Up and Down this page to see the parallax scrolling effect.</p>
+    </div>
+
+    <div class="parallax"></div>
+
+    <div style="background-color:red;font-size: 40px" class='indieFlower content'>
+        This video is when my family and I went on a canyoneering trip to Moab, Utah. I was going down a 98 foot
+        rappel.
+        It was really fun, and I hope I can go again soon! My entire family went, including some cousins and an
+        aunt.
+        You should try it sometime!
+    </div>
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

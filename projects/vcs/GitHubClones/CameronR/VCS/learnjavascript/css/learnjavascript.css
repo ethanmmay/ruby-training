@@ -1,0 +1,21 @@
+body {
+  background-image: url('../../actionpics/images/mytexture3.jpg');
+}
+
+
+
+.grid-container {
+  background-image: url("../images/canyoneering.png");
+  border: 6px solid GREEN;
+  display: grid;
+  grid-template-areas:
+    'img1 img2 img3 img4 img5 img6';
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-container>div {
+  border-radius: 15px 15px 15px 15px;
+  text-align: center;
+  border: 6px solid BLUE;
+  box-shadow: 6px 6px 48px rgb(0, 177, 135);
+}

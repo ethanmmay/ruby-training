@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <script src="js/js.js">
+    </script>
+</head>
+
+<body onLoad="init()">
+    <h1 class="Heading" class="indieFlower">My Typing Speed</h1>
+    <h4 class="Heading" class="indieFlower">By Cameron Roberts</h4>
+    <h4 class="Heading" class="indieFlower">Feb. 2019</h4>
+    <div align="center">
+        <h4></h4>
+        <h2>Typing speed average per week for 6 weeks</h2>
+        <form>
+            <select class='indieFlower' id="oper" class="select1" style="width: 200px;background-color: brown;font-size: 25px;border-color: red;">
+                <option value="111">Hannah</option>
+                <option value="22">Ethan</option>
+                <option value="33">Cameron</option>
+            </select>
+            <select class='indieFlower' id="oper2" class="select1" style="width: 200px;background-color: brown;font-size: 25px;border-color: red;">
+                <option value="1">week 1</option>
+                <option value="2">week 2</option>
+                <option value="3">week 3</option>
+                <option value="4">week 4</option>
+                <option value="5">week 5</option>
+                <option value="6">week 6</option>
+            </select>
+        </form>
+            <input id="val2" type="text" placeholder="Typing speed" style="width:200px; height:30px; background-color: red; border-color: brown; font-size: 15px;">
+            <button onclick="GRAPH()" style="width:200px; height:30px; background-color: red; border-color: brown;">Update Graph</button>
+
+        <canvas id="canvas" height="600" width="1600">
+        </canvas>
+        <br>
+        <!--Legends for Dataplot -->
+        <span style="color:#FF00FF"> Hannah </span>
+        <span style="color:#FFFF00"> Ethan </span>
+        <span style="color:#00FFFF"> Cameron </span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script src="js/js.js"></script>
+</head>
+
+<body onLoad="init()">
+    <h1 class="Heading" class="indieFlower">Blood Pressure Graph</h1>
+    <h4 class="Heading" class="indieFlower">By Cameron Roberts</h4>
+    <h4 class="Heading" class="indieFlower">Feb-Mar 2019</h4>
+    <div align="center">
+        <h4></h4>
+        <h1>Daily Individual Blood Pressure</h1>
+        <p>
+        <h2>Dr. Roberts</h2>
+        <h2>Cameron Roberts</h2>
+        <h2>08/14/2002</h2>
+        </p>
+        <p style='font-size: 20px;'>
+        <span style="color:#FF0066"> Systolic </span>
+        <span style="color:#9933FF"> Diastolic </span>
+        <span style="color:#60f"> Glucose </span>
+        <span style="color:#06f"> Pulse Ox </span>
+        <span style="color:#F60"> Well Being </span>
+        </p>
+        <canvas id="canvas" height="600" width="1600">
+        </canvas>
+        <p></p>
+        <table class='indieFlower2' style='text-align:center;'>
+            <tr rowspan='all'><button onclick='GRAPH()' style='font-size: 50px; width: auto; height: auto; border-color: #FF0066; background-color: #FF0066'>Submit</button></tr>
+            <tr>
+                <td>Day of the month</td>
+                <td style="color:#FF0066">Systolic</td>
+                <img src="../dr_bloodpressure/images/blood graph.jpg" width="400" height='400'>
+                <td style="color:#9933FF">Diastolic</td>
+                <td style="color:#60f">Glucose</td>
+                <img src="../dr_bloodpressure/images/glucose.gif" width="400" height='400'>
+                <td style="color:#06f">Pulse Ox</td>
+                <img src="../dr_bloodpressure/images/pulseox.png" width="400" height='400'>
+                <td style="color:#f60">Well Being</td>
+                <img src="../dr_bloodpressure/images/well being.png" width="400" height='400'>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input class='pinput' id='A1' type="text"></td>
+                <td><input class='oinput' id='I1' type="text"></td>
+                <td><input class='qinput' id='E1' type="text"></td>
+                <td><input class='rinput' id='O1' type="text"></td>
+                <td><input class='sinput' id='U1' type="text"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input class='pinput' id='A2' type="text"></td>
+                <td><input class='oinput' id='I2' type="text"></td>
+                <td><input class='qinput' id='E2' type="text"></td>
+                <td><input class='rinput' id='O2' type="text"></td>
+                <td><input class='sinput' id='U2' type="text"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input class='pinput' id='A3' type="text"></td>
+                <td><input class='oinput' id='I3' type="text"></td>
+                <td><input class='qinput' id='E3' type="text"></td>
+                <td><input class='rinput' id='O3' type="text"></td>
+                <td><input class='sinput' id='U3' type="text"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input class='pinput' id='A4' type="text"></td>
+                <td><input class='oinput' id='I4' type="text"></td>
+                <td><input class='qinput' id='E4' type="text"></td>
+                <td><input class='rinput' id='O4' type="text"></td>
+                <td><input class='sinput' id='U4' type="text"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input class='pinput' id='A5' type="text"></td>
+                <td><input class='oinput' id='I5' type="text"></td>
+                <td><input class='qinput' id='E5' type="text"></td>
+                <td><input class='rinput' id='O5' type="text"></td>
+                <td><input class='sinput' id='U5' type="text"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><input class='pinput' id='A6' type="text"></td>
+                <td><input class='oinput' id='I6' type="text"></td>
+                <td><input class='qinput' id='E6' type="text"></td>
+                <td><input class='rinput' id='O6' type="text"></td>
+                <td><input class='sinput' id='U6' type="text"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><input class='pinput' id='A7' type="text"></td>
+                <td><input class='oinput' id='I7' type="text"></td>
+                <td><input class='qinput' id='E7' type="text"></td>
+                <td><input class='rinput' id='O7' type="text"></td>
+                <td><input class='sinput' id='U7' type="text"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><input class='pinput' id='A8' type="text"></td>
+                <td><input class='oinput' id='I8' type="text"></td>
+                <td><input class='qinput' id='E8' type="text"></td>
+                <td><input class='rinput' id='O8' type="text"></td>
+                <td><input class='sinput' id='U8' type="text"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><input class='pinput' id='A9' type="text"></td>
+                <td><input class='oinput' id='I9' type="text"></td>
+                <td><input class='qinput' id='E9' type="text"></td>
+                <td><input class='rinput' id='O9' type="text"></td>
+                <td><input class='sinput' id='U9' type="text"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><input class='pinput' id='A10' type="text"></td>
+                <td><input class='oinput' id='I10' type="text"></td>
+                <td><input class='qinput' id='E10' type="text"></td>
+                <td><input class='rinput' id='O10' type="text"></td>
+                <td><input class='sinput' id='U10' type="text"></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><input class='pinput' id='A11' type="text"></td>
+                <td><input class='oinput' id='I11' type="text"></td>
+                <td><input class='qinput' id='E11' type="text"></td>
+                <td><input class='rinput' id='O11' type="text"></td>
+                <td><input class='sinput' id='U11' type="text"></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><input class='pinput' id='A12' type="text"></td>
+                <td><input class='oinput' id='I12' type="text"></td>
+                <td><input class='qinput' id='E12' type="text"></td>
+                <td><input class='rinput' id='O12' type="text"></td>
+                <td><input class='sinput' id='U12' type="text"></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><input class='pinput' id='A13' type="text"></td>
+                <td><input class='oinput' id='I13' type="text"></td>
+                <td><input class='qinput' id='E13' type="text"></td>
+                <td><input class='rinput' id='O13' type="text"></td>
+                <td><input class='sinput' id='U13' type="text"></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><input class='pinput' id='A14' type="text"></td>
+                <td><input class='oinput' id='I14' type="text"></td>
+                <td><input class='qinput' id='E14' type="text"></td>
+                <td><input class='rinput' id='O14' type="text"></td>
+                <td><input class='sinput' id='U14' type="text"></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><input class='pinput' id='A15' type="text"></td>
+                <td><input class='oinput' id='I15' type="text"></td>
+                <td><input class='qinput' id='E15' type="text"></td>
+                <td><input class='rinput' id='O15' type="text"></td>
+                <td><input class='sinput' id='U15' type="text"></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><input class='pinput' id='A16' type="text"></td>
+                <td><input class='oinput' id='I16' type="text"></td>
+                <td><input class='qinput' id='E16' type="text"></td>
+                <td><input class='rinput' id='O16' type="text"></td>
+                <td><input class='sinput' id='U16' type="text"></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td><input class='pinput' id='A17' type="text"></td>
+                <td><input class='oinput' id='I17' type="text"></td>
+                <td><input class='qinput' id='E17' type="text"></td>
+                <td><input class='rinput' id='O17' type="text"></td>
+                <td><input class='sinput' id='U17' type="text"></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td><input class='pinput' id='A18' type="text"></td>
+                <td><input class='oinput' id='I18' type="text"></td>
+                <td><input class='qinput' id='E18' type="text"></td>
+                <td><input class='rinput' id='O18' type="text"></td>
+                <td><input class='sinput' id='U18' type="text"></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td><input class='pinput' id='A19' type="text"></td>
+                <td><input class='oinput' id='I19' type="text"></td>
+                <td><input class='qinput' id='E19' type="text"></td>
+                <td><input class='rinput' id='O19' type="text"></td>
+                <td><input class='sinput' id='U19' type="text"></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td><input class='pinput' id='A20' type="text"></td>
+                <td><input class='oinput' id='I20' type="text"></td>
+                <td><input class='qinput' id='E20' type="text"></td>
+                <td><input class='rinput' id='O20' type="text"></td>
+                <td><input class='sinput' id='U20' type="text"></td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td><input class='pinput' id='A21' type="text"></td>
+                <td><input class='oinput' id='I21' type="text"></td>
+                <td><input class='qinput' id='E21' type="text"></td>
+                <td><input class='rinput' id='O21' type="text"></td>
+                <td><input class='sinput' id='U21' type="text"></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td><input class='pinput' id='A22' type="text"></td>
+                <td><input class='oinput' id='I22' type="text"></td>
+                <td><input class='qinput' id='E22' type="text"></td>
+                <td><input class='rinput' id='O22' type="text"></td>
+                <td><input class='sinput' id='U22' type="text"></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td><input class='pinput' id='A23' type="text"></td>
+                <td><input class='oinput' id='I23' type="text"></td>
+                <td><input class='qinput' id='E23' type="text"></td>
+                <td><input class='rinput' id='O23' type="text"></td>
+                <td><input class='sinput' id='U23' type="text"></td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td><input class='pinput' id='A24' type="text"></td>
+                <td><input class='oinput' id='I24' type="text"></td>
+                <td><input class='qinput' id='E24' type="text"></td>
+                <td><input class='rinput' id='O24' type="text"></td>
+                <td><input class='sinput' id='U24' type="text"></td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td><input class='pinput' id='A25' type="text"></td>
+                <td><input class='oinput' id='I25' type="text"></td>
+                <td><input class='qinput' id='E25' type="text"></td>
+                <td><input class='rinput' id='O25' type="text"></td>
+                <td><input class='sinput' id='U25' type="text"></td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td><input class='pinput' id='A26' type="text"></td>
+                <td><input class='oinput' id='I26' type="text"></td>
+                <td><input class='qinput' id='E26' type="text"></td>
+                <td><input class='rinput' id='O26' type="text"></td>
+                <td><input class='sinput' id='U26' type="text"></td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td><input class='pinput' id='A27' type="text"></td>
+                <td><input class='oinput' id='I27' type="text"></td>
+                <td><input class='qinput' id='E27' type="text"></td>
+                <td><input class='rinput' id='O27' type="text"></td>
+                <td><input class='sinput' id='U27' type="text"></td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td><input class='pinput' id='A28' type="text"></td>
+                <td><input class='oinput' id='I28' type="text"></td>
+                <td><input class='qinput' id='E28' type="text"></td>
+                <td><input class='rinput' id='O28' type="text"></td>
+                <td><input class='sinput' id='U28' type="text"></td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td><input class='pinput' id='A29' type="text"></td>
+                <td><input class='oinput' id='I29' type="text"></td>
+                <td><input class='qinput' id='E29' type="text"></td>
+                <td><input class='rinput' id='O29' type="text"></td>
+                <td><input class='sinput' id='U29' type="text"></td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td><input class='pinput' id='A30' type="text"></td>
+                <td><input class='oinput' id='I30' type="text"></td>
+                <td><input class='qinput' id='E30' type="text"></td>
+                <td><input class='rinput' id='O30' type="text"></td>
+                <td><input class='sinput' id='U30' type="text"></td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td><input class='pinput' id='A31' type="text"></td>
+                <td><input class='oinput' id='I31' type="text"></td>
+                <td><input class='qinput' id='E31' type="text"></td>
+                <td><input class='rinput' id='O31' type="text"></td>
+                <td><input class='sinput' id='U31' type="text"></td>
+            </tr>
+        </table>
+        <br>
+        <!--Legends for Dataplot -->
+    </div>
+</body>
+
+</html>

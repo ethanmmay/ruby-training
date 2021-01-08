@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="css/mortgage.css">
+    <title>Mortgage</title>
+</head>
+
+<body>
+    <h1 class="indieFlower" style="font-size: 3em; text-align: center;">Payment Calculator</h1>
+    <h4 class="center">By Cameron Roberts</h4>
+    <h4 class="center">Jan-Feb 2019</h4>
+    <div class="equation">
+        <img src="images/equation.png" alt="Mortgage equation" style="float: right;" height="250px">
+        <ul class="indieFlower" style="font-size: 2em;">
+            <li>M = Monthly payment</li>
+            <li>P = Cost - down payment</li>
+            <li>r = APR</li>
+            <li>n = payments per year</li>
+            <li>t = amount of years in loan</li>
+        </ul>
+        <hr>
+        <div id="table">
+            <table id="entryTable">
+                <tr>
+                    <td>
+                        <input id="cost" type="text" name="cost">
+                    </td>
+                    <td>
+                        <h3>Cost</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="st" type="text" name="st">
+                    </td>
+                    <td>
+                        <h3>Sales Tax</h3>
+                        <h3>eg. 10 for 10%</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" onclick="tax()">Calculate tax</button>
+                    </td>
+                    <td id="taxres" style="font-size: 30px">
+
+                    </td>
+                <tr>
+                    <td>
+                        <input id="dp" type="text" name="dp">
+                    </td>
+                    <td>
+                        <h3>Down payment</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" onclick="principal()">Calculate principal</button>
+                    </td>
+                    <td id="proy" style="font-size: 30px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="apr" type="text" name="apr">
+                    </td>
+                    <td>
+                        <h3>APR</h3>
+                        <h3>eg. 6 for 6%</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="ppr" type="text" name="ppr">
+                    </td>
+                    <td>
+                        <h3>Payments per year</h3>
+                        <h3>No more than 12</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" onclick="rpp()">Calculate rate per payment</button>
+                    </td>
+                    <td id="out" style="font-size: 30px"></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="years" type="text" name="years">
+                    </td>
+                    <td>
+                        <h3>Years in loan</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" onclick="calculate()">Calculate period payment</button>
+                    </td>
+                    <td id="result" style="font-size: 30px">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="js/mortgage.js"></script>
+
+</html>

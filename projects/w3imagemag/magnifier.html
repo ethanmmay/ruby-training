@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .img-magnifier-container {
+      position: relative;
+    }
+
+    .img-magnifier-glass {
+      position: absolute;
+      border: 3px solid #000;
+      border-radius: 50%;
+      cursor: none;
+      /*Set the size of the magnifier glass:*/
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var fileInput = document.getElementById('fileInput');
+      var myimage = document.getElementById('myimage');
+      var magsize = document.getElementById('magsize').value;
+      fileInput.addEventListener('change', function (e) {
+        var file = fileInput.files[0];
+        var imageType = /image.*/;
+        if (file.type.match(imageType)) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            myimage.innerHTML = "";
+            document.getElementById("myimage").src = reader.result;
+            document.getElementById("magsize").src = reader.result;
+            magnify("myimage", "magsize");
+          }
+          reader.readAsDataURL(file);
+        } else {
+          myimage.innerHTML = "File not supported"
+        }
+      });
+    }
+
+    function magnify(imgID, magsize) {
+      var img, glass, w, h, bw;
+      var magsize = document.getElementById("magsize").value;
+      if (magsize == "") {
+        magsize = 1;
+      }
+      img = document.getElementById(imgID);
+      /*create magnifier glass:*/
+      glass = document.createElement("DIV");
+      glass.setAttribute("class", "img-magnifier-glass");
+      /*insert magnifier glass:*/
+      img.parentElement.insertBefore(glass, img);
+      /*set background properties for the magnifier glass:*/
+      glass.style.backgroundImage = "url('" + img.src + "')";
+      glass.style.backgroundRepeat = "no-repeat";
+      glass.style.backgroundSize = (img.width * magsize) + "px " + (img.height * magsize) + "px";
+      bw = 3;
+      w = glass.offsetWidth / 2;
+      h = glass.offsetHeight / 2;
+      /*execute a function when someone moves the magnifier glass over the image:*/
+      glass.addEventListener("mousemove", moveMagnifier);
+      img.addEventListener("mousemove", moveMagnifier);
+      /*and also for touch screens:*/
+      glass.addEventListener("touchmove", moveMagnifier);
+      img.addEventListener("touchmove", moveMagnifier);
+
+      function moveMagnifier(e) {
+        var magsize = document.getElementById("magsize").value;
+        glass.style.backgroundSize = (img.width * magsize) + "px " + (img.height * magsize) + "px";
+        if (magsize == "") {
+          magsize = 1;
+        }
+        var pos, x, y;
+        /*prevent any other actions that may occur when moving over the image*/
+        e.preventDefault();
+        /*get the cursor's x and y positions:*/
+        pos = getCursorPos(e);
+        x = pos.x;
+        y = pos.y;
+        /*prevent the magnifier glass from being positioned outside the image:*/
+        if (x > img.width - (w / magsize)) {
+          x = img.width - (w / magsize);
+        }
+        if (x < w / magsize) {
+          x = w / magsize;
+        }
+        if (y > img.height - (h / magsize)) {
+          y = img.height - (h / magsize);
+        }
+        if (y < h / magsize) {
+          y = h / magsize;
+        }
+        /*set the position of the magnifier glass:*/
+        glass.style.left = (x - w) + "px";
+        glass.style.top = (y - h) + "px";
+        /*display what the magnifier glass "sees":*/
+        glass.style.backgroundPosition = "-" + ((x * magsize) - w + bw) + "px -" + ((y * magsize) - h + bw) + "px";
+      }
+
+      function getCursorPos(e) {
+        var a, x = 0,
+          y = 0;
+        e = e || window.event;
+        /*get the x and y positions of the image:*/
+        a = img.getBoundingClientRect();
+        /*calculate the cursor's x and y coordinates, relative to the image:*/
+        x = e.pageX - a.left;
+        y = e.pageY - a.top;
+        /*consider any page scrolling:*/
+        x = x - window.pageXOffset;
+        y = y - window.pageYOffset;
+        return {
+          x: x,
+          y: y
+        };
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <h1>Image Magnifier Glass by Ethan May</h1>
+  <h2>Created May 2019</h2>
+
+  <div>
+    Mouse over the image or select an image file:
+    <input type="file" id="fileInput">
+    <input type="value" id="magsize">
+  </div>
+
+  <div class="img-magnifier-container">
+    <img id="myimage" width="600" height="600">
+  </div>
+
+
+
+
+</body>
+
+</html>

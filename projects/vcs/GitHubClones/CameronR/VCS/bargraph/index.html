@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/js.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bar Graph</title>
+</head>
+<body onload="init()">
+    <h1>Economics Bar Graph</h1>
+    <h3>By Cameron Roberts</h3>
+    <h3>Mar. 2019</h3>
+    <div>
+        <h2 style='text-align:center'>Top Country by 
+        <select name="type" id="select"><strong>
+            <option value="1">GDP(PPP)</option>
+            </strong>
+        </select></h2>
+        <button onclick='resetInit()' class='button1'>Original Graph</button>
+        <p></p>
+        <input id='country' placeholder="Country to View" type="text">
+        <button onclick='resetOrig()' class='button1'>Submit Country</button>
+        <p></p>
+        <input id='change' placeholder="Country to View" type="text">
+        <button onclick='changeVal()' class='button1'>Change Country Value</button>
+        <p></p>
+        <canvas id='canvas' height='400' width='650'></canvas>
+        <p><strong>Explanations</strong></p>
+        <p>
+            <em><strong>GDP (gross domestic product)</strong></em> is the sum of the gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without deductions for depreciation of fabricated assets or for depletion and degradation of natural resources.
+        </p>
+        <p>
+            <em><strong>GDP PPP (purchasing power parity)</strong></em> is gross domestic product converted to international dollars using purchasing power parity rates. An international dollar has the same purchasing power over GDP as a U.S. dollar has in the United States. Purchasing power parities (PPPs) are the rates of currency conversion that eliminate the differences in price levels between countries.
+        </p>
+        <p>
+            <em><strong>GDP (PPP)</strong></em> per capita is GDP on a purchasing power parity basis divided by population. Please note: Whereas PPP estimates for OECD countries are quite reliable, PPP estimates for developing countries are often rough approximations.
+        </p>
+        <p>
+            <em><strong>GNI (gross national income)</strong></em> is gross domestic product (GDP) plus net receipts of primary income (employee compensation and investment income) from abroad. GDP is the sum of value added by all resident producers plus any product taxes (less subsidies) not included in the valuation of output.
+        </p>
+        <p>
+            <em><strong>GNI per capita</strong></em> is gross national income divided by mid-year population.
+        </p>
+        <p>
+            <em><strong>PPP GNI</strong></em> is gross national income converted to international dollars using purchasing power parity rates. An international dollar has the same purchasing power over GNI as a U.S. dollar has in the United States.
+        </p>
+    </div>
+</body>
+</html>

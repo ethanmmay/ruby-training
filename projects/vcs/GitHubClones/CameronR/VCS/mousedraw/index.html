@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/js.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse Draw</title>
+</head>
+
+<body onload="InitMouseDraw()">
+    <div align="center">
+        <br>
+        <h1>Mouse Draw!</h1>
+        <h5>By Cameron Roberts</h5>
+        <h5>March 2019</h5>
+        <br>
+        <hr><br>
+        <canvas id="drawCanvas" width='1000' height="600" style="border: 5px solid red;"></canvas>
+        <br><br>
+        <button onclick="javascript:clearArea(); return false;">Clear Area</button>
+        <button onclick="javascript:ttt(); return false;">tic-tac-toe</button>
+        <button onclick="javascript:lg(); return false;">line game</button>
+        <input id='square' type='text' placeholder="Enter the amount of squares">
+        <input type="text" id='selwidth' placeholder='Enter the width of the line'>
+        Line color: <select id="selcolor">
+            <option value="red">Red</option>
+            <option value="orange" selected='selected'>Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+        </select>
+    </div>
+</body>
+
+</html>

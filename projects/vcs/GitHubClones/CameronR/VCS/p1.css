@@ -1,0 +1,26 @@
+body {
+  background-image: url("../images/abstract-texture-textures-form.jpg");
+}
+
+@media screen and (max-width: 40em) {
+  body {
+    background-image: url("../../images/canyoneering.jpg");
+  }
+
+  .grid-container {
+    background-image: url("../../images/abstract-texture-textures-form.jpg");
+    display: grid;
+    grid-template-areas:
+      'ssp11'
+      'ssp12'
+      'ssp13'
+      'ssp14';
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .grid-container>div {
+    border: 6px solid ORANGE;
+    box-shadow: 6px 6px 48px rgb(0, 87, 255);
+  }
+}

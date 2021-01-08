@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to my Clock page!</title>
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+  <h1>Welcome to my Clock page!  (By Cameon R.)</h1>
+
+  <br>
+  <hr><br>
+
+  <canvas id="canvas" width="400" height="400" style="background-color:#333"></canvas>
+
+  <br>
+  <hr><br>
+
+  <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    radius = radius * 0.90
+    setInterval(drawClock, 50);
+
+    var grad3;
+    grad3 = ctx.createRadialGradient(0, 0, radius * .1, 0, 0, radius * .95);
+    grad3.addColorStop(radius * 0.1, 'red');
+    grad3.addColorStop(radius * 0.2, 'pink');
+    grad3.addColorStop(radius * 0.3, 'purple');
+    grad3.addColorStop(radius * 0.4, 'brown');
+    grad3.addColorStop(radius * 0.5, 'black');
+    grad3.addColorStop(radius * 0.6, 'orange');
+    grad3.addColorStop(radius * 0.7, 'green');
+    grad3.addColorStop(radius * 0.8, 'yellow');
+    grad3.addColorStop(radius * 0.9, 'gray');
+    grad3.addColorStop(radius * 0.95, 'white');
+
+    function drawClock() {
+      drawFace(ctx, radius, grad3);
+      drawNumbers(ctx, radius);
+      drawTime(ctx, radius);
+      drawNumbersSec(ctx, radius);
+    }
+
+    function drawTime(ctx, radius) {
+      var now = new Date();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      var second = now.getSeconds();
+      //hour
+      hour = hour % 24;
+      hour = (hour * Math.PI / 12) + (minute * Math.PI / (12 * 60)) + (second * Math.PI / (720 * 60));
+      drawHand(ctx, hour, radius * 0.5, radius * 0.07, second, minute, hour);
+      //minute
+      minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+      drawHand(ctx, minute, radius * 0.8, radius * 0.07, second, minute, hour);
+      //second
+      second = (second * Math.PI / 30);
+      drawHand(ctx, second, radius * 0.9, radius * 0.02, second, minute, hour);
+    }
+
+    function drawHand(ctx, pos, length, width, second, minute, hour) {
+
+      if (pos == second) {
+        ctx.strokeStyle = 'red';
+      }
+
+      if (pos == minute) {
+        ctx.strokeStyle = 'blue';
+      }
+
+      if (pos == hour) {
+        ctx.strokeStyle = 'green';
+      }
+
+      ctx.beginPath();
+      ctx.lineWidth = width;
+      ctx.lineCap = "round";
+      ctx.moveTo(0, 0);
+      ctx.rotate(pos);
+      ctx.lineTo(0, -length);
+      ctx.stroke();
+      ctx.rotate(-pos);
+    }
+
+    function drawFace(ctx, radius, grad3) {
+      var grad;
+      var grad2;
+      ctx.beginPath();
+      ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+      grad2 = ctx.createRadialGradient(0, 0, 0, 0, 0, radius * .1);
+      grad.addColorStop(0, 'red');
+      grad.addColorStop(1 / 5, 'orange');
+      grad.addColorStop(2 / 5, 'yellow');
+      grad.addColorStop(3 / 5, 'green');
+      grad.addColorStop(4 / 5, 'blue');
+      grad.addColorStop(1, 'purple');
+
+      grad2.addColorStop(0, 'white');
+      grad2.addColorStop(1, 'blue');
+
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = radius * 0.1;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+      ctx.fillStyle = grad2;
+      ctx.fill();
+      ctx.fillStyle = 'blue';
+    }
+
+    function drawNumbers(ctx, radius) {
+      var ang;
+      var num;
+      ctx.font = radius * 0.15 + "px calibri";
+      ctx.textBaseline = "middle";
+      ctx.textAlign = "center";
+      for (num = 1; num < 25; num++) {
+        ang = num * Math.PI / 12;
+        ctx.rotate(ang);
+        ctx.translate(0, -radius * 0.85);
+        ctx.rotate(-ang);
+        ctx.fillText(num.toString(), 0, 0);
+        ctx.rotate(ang);
+        ctx.translate(0, radius * 0.85);
+        ctx.rotate(-ang);
+      }
+    }
+
+    function drawNumbersSec(ctx, radius) {
+      var ang1;
+      var num1;
+      ctx.font = radius * 0.07 + "px calibri";
+      ctx.textBaseline = "middle";
+      ctx.textAlign = "center";
+      for (num1 = 5; num1 < 61; num1+=5) {
+        ang1 = num1 * Math.PI / 30;
+        ctx.rotate(ang1);
+        ctx.translate(0, -radius * 0.6);
+        ctx.rotate(-ang1);
+        ctx.fillText(num1.toString(), 0, 0);
+        ctx.rotate(ang1);
+        ctx.translate(0, radius * 0.6);
+        ctx.rotate(-ang1);
+      }
+    }
+  </script>
+</body>
+
+</html>

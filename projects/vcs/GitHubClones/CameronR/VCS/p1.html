@@ -1,0 +1,78 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="p1.css">
+  <title>Project 1</title>
+</head>
+
+<h1>
+  Project 1:  Create a Virtual Machine, install the necessary software,
+  and get an offsite backup.
+</h1>
+<style>
+  .grid-item-p1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .item1 {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+  }
+
+  .ssp11 {
+    grid-column: 1;
+    grid-row: 1 / span 1;
+  }
+
+  .ssp12 {
+    grid-column: 2;
+    grid-row: 1 / span 1;
+  }
+
+  .ssp13 {
+    grid-column: 1;
+    grid-row: 2 / span 1;
+  }
+
+  .ssp14 {
+    grid-column: 2;
+    grid-row: 2 / span 1;
+  }
+
+  .grid-container-p1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+      "screenshot1 ... screenshot2"
+      "screenshot3 ... screenshot4";
+    grid-template-rows: auto auto;
+  }
+
+  .grid-container-p1>div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    background-image: url("../../images/canyoneering.jpg");
+    border: 6px solid BLUE;
+  }
+</style>
+
+<body>
+  <div class="grid-container-p1">
+    <div class="ssp11">
+      This is when I created a clone
+      <img src="../images/Screenshots/VM Clone Screenshot.png" width="800px" height="400px">
+    </div>
+      <div class="ssp12">
+        This is when I changed the password:
+        <img src="../images/Screenshots/VM Personalize.png" width="800px" height="400px">
+    </div>
+        <div class="ssp13">
+          This is when I installed atom, filezilla and apache2
+          <img src="../images/Screenshots/VM Software.png" width="200px" height="400px">
+    </div>
+          <div class="ssp14">
+            This is when I got an offsite OVA.
+            <img src="../images/Screenshots/VM OVA.png" width="800px" height="400px">
+    </div>
+</body>

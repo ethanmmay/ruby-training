@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script src="js/js.js"></script>
+</head>
+
+<body onLoad="init()">
+    <h1 class="Heading" class="indieFlower">JS Graphing</h1>
+    <h4 class="Heading" class="indieFlower">By Cameron Roberts</h4>
+    <h4 class="Heading" class="indieFlower">Feb-Mar 2019</h4>
+    <div align="center">
+        <h4></h4>
+        <h2>Monthly Profits of Idaho Companies(in Millions of dollars)</h2>
+        <h3>(These numbers are not real, they are for JavaScript graphing practice!) </h3>
+        <table class='indieFlower2'>
+            <tr>
+                <td></td>
+                <td>Jan</td>
+                <td>Feb</td>
+                <td>Mar</td>
+                <td>Apr</td>
+                <td>May</td>
+                <td>Jun</td>
+                <td>Jul</td>
+                <td>Aug</td>
+                <td>Sep</td>
+                <td>Oct</td>
+                <td>Nov</td>
+                <td>Dec</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Albertsons</td>
+                <td><input id='A1' type="text"></td>
+                <td><input id='A2' type="text"></td>
+                <td><input id='A3' type="text"></td>
+                <td><input id='A4' type="text"></td>
+                <td><input id='A5' type="text"></td>
+                <td><input id='A6' type="text"></td>
+                <td><input id='A7' type="text"></td>
+                <td><input id='A8' type="text"></td>
+                <td><input id='A9' type="text"></td>
+                <td><input id='A10' type="text"></td>
+                <td><input id='A11' type="text"></td>
+                <td><input id='A12' type="text"></td>
+                <td rowspan='4'><button onclick="GRAPH()">Submit</button></td>
+            </tr>
+            <tr>
+                <td>Ida Corp</td>
+                <td><input id='I1' type="text"></td>
+                <td><input id='I2' type="text"></td>
+                <td><input id='I3' type="text"></td>
+                <td><input id='I4' type="text"></td>
+                <td><input id='I5' type="text"></td>
+                <td><input id='I6' type="text"></td>
+                <td><input id='I7' type="text"></td>
+                <td><input id='I8' type="text"></td>
+                <td><input id='I9' type="text"></td>
+                <td><input id='I10' type="text"></td>
+                <td><input id='I11' type="text"></td>
+                <td><input id='I12' type="text"></td>
+            </tr>
+            <tr>
+                <td>Micron</td>
+                <td><input id='M1' type="text"></td>
+                <td><input id='M2' type="text"></td>
+                <td><input id='M3' type="text"></td>
+                <td><input id='M4' type="text"></td>
+                <td><input id='M5' type="text"></td>
+                <td><input id='M6' type="text"></td>
+                <td><input id='M7' type="text"></td>
+                <td><input id='M8' type="text"></td>
+                <td><input id='M9' type="text"></td>
+                <td><input id='M10' type="text"></td>
+                <td><input id='M11' type="text"></td>
+                <td><input id='M12' type="text"></td>
+            </tr>
+        </table>
+        <canvas id="canvas" height="600" width="1600">
+        </canvas>
+        <br>
+        <!--Legends for Dataplot -->
+        <span style="color:#FF0066"> Albertsons </span>
+        <span style="color:#9933FF"> IdaCorp </span>
+        <span style="color:#000"> Micron </span>
+    </div>
+</body>
+
+</html>

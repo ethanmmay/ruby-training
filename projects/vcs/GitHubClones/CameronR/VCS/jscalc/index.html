@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/home.css">
+  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  <title>JS Calc</title>
+</head>
+<body>
+  <h1>Welcome to my JS Calc!</h1>
+  <h5>By Cameron R.</h5>
+  <h5>Finished on 01/09/2019</h5>
+  <br><hr><br>
+  <h3>Leave blank for 0</h3>
+  <form>
+    <input type="text" id="value1">
+    <select id="operator1">
+      <option value="add">+</option>
+      <option value="sub">-</option>
+      <option value="div">/</option>
+      <option value="mult">*</option>
+    </select>
+    <input type="text" id="value2">
+    <br><br>
+    <button type="button" onclick="calc()">Calculate</button>
+  </form>
+  <br>
+  <div class="colors" id='result'></div>
+</body>
+  <script src="js/main.js"></script>
+</html>

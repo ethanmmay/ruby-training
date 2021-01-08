@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Action Pics</title>
+  <link rel="stylesheet" href="css/actionpics.css">
+  <link href="https://fonts.googleapis.com/css?family=Mali|Rosario|Spicy+Rice" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class='rosario'>Welcome to my action picture page!  Made by Cameron R</h1>
+  <br>
+  <hr>
+  <br>
+  <table>
+    <tr>
+      <th colspan='2' class='all'>Action Pictures I Made</th>
+    </tr>
+    <tr>
+      <th>My Action Picture</th>
+      <th>How I made this picture</th>
+    </tr>
+    <tr>
+      <td>
+        <img class='responsive' src="images/combined.jpg" alt="a1 first action pic" width='800px' height='375px'>
+      </td>
+      <td>
+        <ol>
+          <li>First, I added layers to the images with gimp.<img src="images/addlayersgimp.png" class="zoom" width="250"></li>
+          <li>Then, I 'cut out' part of the layers to reveal the person beneath.<img src="images/eraselayer.png" class="zoom" width="250"></li>
+          <li>After that, I exported, and uploaded to my website.<img src="images/complete.png" class="zoom" width="250"></li>
+        </ol>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <hr>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <img src="images/action.gif" alt="a1 first gif" width="500">
+      </td>
+      <td>
+        <ol>
+          <li>First, I opened my Action Pics with gimp.<img src="images/openpics.png" class="zoom" width="250"></li>
+          <li>Then, I went into format, and then optimized for GIF.<img src="images/optimize.png" class="zoom" width="250"></li>
+          <li>After that, I exported, and uploaded to my website.<img src="images/exportgif.png" class="zoom" width="250"></li>
+        </ol>
+      </td>
+    </tr>
+  </table>
+  <br><hr><br>
+  <table>
+    <td colspan="2">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      .mySlides {display:none;}
+    </style>
+    <body>
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="images/action6.jpg" style="width:100%">
+          <img class="mySlides" src="images/action5.jpg" style="width:100%">
+          <img class="mySlides" src="images/action4.jpg" style="width:100%">
+          <img class="mySlides" src="images/action3.jpg" style="width:100%">
+          <img class="mySlides" src="images/action2.jpg" style="width:100%">
+          <img class="mySlides" src="images/action1.jpg" style="width:100%">
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+      </td>
+    </body>
+    <td>
+      <ol>
+        <li>First, I went to my file system and found all the pictures I used.<img src="images/picfind.png" class="zoom" width="250"></li>
+        <li>Then, I got each pictures file name, and put it into a list on my html.<img src="images/inhtml.png" class="zoom" width="250"></li>
+        <li>After that, I did the extra coding needed, and then tested it!<img src="images/test.png" class="zoom" width="250"></li>
+      </ol>
+    </td>
+  </table>
+</body>
+
+</html>
+
+<br><hr><br>
+<table>
+  <tr>
+    <th colspan="2">
+      <h2>My super fun videos</h2>
+    </th>
+  </tr>
+  <td>
+    <video width="400" controls>
+      <source src="video/puppiesvid.mp4" type="video/mp4">
+      <source src="video/puppiesvid.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+  </td>
+  <td><h2>EXPLAIN CREATIVITY HERE</h2></td>
+</table>
+
+<!-- This Javascript must go at the end -->
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+</script>
