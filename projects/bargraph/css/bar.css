@@ -1,0 +1,50 @@
+body {
+    background-color: #9afff7;
+    color: #008cff;
+}
+
+.gfont {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+h2 {
+    color: #5050ff;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+li {
+    color: #008cff;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#canvas {
+    background-color: #c6fcf7;
+    box-shadow: 5px 5px 5px #5050ff;
+    border: 5px solid #008cff;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-family: 'Mukta', sans-serif;
+}
+
+a {
+    color: #5050ff;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #8383f8;
+    text-decoration: line-through;
+}
+
+button, select, input {
+    color: #ffffff;
+    background-color: #008cff;
+    border: 1px solid #c6fcf7;
+    border-radius: 20px;
+    padding: 10px;
+    width: auto;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    text-align: center;
+    outline: 0;
+}
+

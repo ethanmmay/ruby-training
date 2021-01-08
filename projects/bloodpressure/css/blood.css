@@ -1,0 +1,53 @@
+body {
+    background-image: url("../images/background.jpg")
+   }
+   
+   table {
+    font-size: 30px;
+   }
+   
+   #submit {
+   font-size: 20px; 
+   width: auto; 
+   height: auto; 
+   border-color: #FF0066; 
+   background-color: #FF0066;
+   }
+
+   input {
+       width: 75px;
+       border: 1px solid white;
+       border-radius: 3px;
+       color: black;
+       font-size: 14pt;
+       text-align: center;
+   }
+   
+   input:focus {
+    outline: 0;
+    border: 2px solid black;
+   }
+   .oinput {
+    background-color: #9933FF;
+    border-color: #9933FF;
+   }
+   
+   .pinput {
+    background-color: #FF0066;
+    border-color: #FF0066;
+   }
+   
+   .rinput {
+    background-color: #ffaa00;
+    border-color: #FFaa00;
+   }
+   
+   .ginput {
+    background-color: #00ffaa;
+    border-color: #00ffaa;
+   }
+   
+   .binput {
+    background-color: #aaff00;
+    border-color: #aaff00;
+   }

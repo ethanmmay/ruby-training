@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title class="gfont">Action Pictures by Ethan May</title>
+
+  <link rel="stylesheet" href="css/actionpics.css">
+  <link href="https://fonts.googleapis.com/css?family=Kodchasan" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src='js/jquery-3.3.1.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='js/actionpics.js'></script>
+
+  <style>
+    .mySlides {
+      display: none;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <table>
+    <tr>
+      <th class="gfont">My Action Pictures</th>
+      <th class="gfont">How I Made This Picture</th>
+    </tr>
+    <tr>
+      <td><img src="images/colterflipaction.png" alt="Picture Unavailable Due To Bandwith Issues" width="800px" height="600px"></td>
+      <td class="gfont2">
+        <p class="gfont2">During this project we learned how to use Graphic Image Manipulation Tool (GIMP) to create layers
+          and mask them in order to copy the same object multiple times throughout a picture. In this example
+          it was my friend Colter doing a backflip in front of Cenntennial Highschool</p>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="images/colterflipaction.gif" alt="Picture Unavailable Due To Bandwith Issues"></td>
+      <td class="gfont2">
+        <p class="gfont2">We then exported the image as a GIF and animated it as well as picked the speed of the animation.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2 class="w3-center" class="gfont">My Slideshow</h2>
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="images/flip6.JPG" alt="img6" style="width:97%; align:center">
+          <img class="mySlides" src="images/flip5.JPG" alt="img5" style="width:97%; align:center">
+          <img class="mySlides" src="images/flip4.JPG" alt="img4" style="width:97%; align:center">
+          <img class="mySlides" src="images/flip3.JPG" alt="img3" style="width:97%; align:center">
+          <img class="mySlides" src="images/flip2.JPG" alt="img2" style="width:97%; align:center">
+          <img class="mySlides" src="images/flip1.JPG" alt="img1" style="width:97%; align:center">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <br>
+
+        <br>
+      </td>
+      <td class="gfont2">
+        <p class="gfont2">Finally, we created a slideshow with w3 to show each of our images. We also reversed the order to make the slideshow more user friendly.</p>
+      </td>
+  </table>
+  <br><br><br>
+  <table>
+    <tr>
+      <th class="gfont">My Action Video</th>
+      <th class="gfont">How I Made This Video</th>
+    </tr>
+    <tr>
+      <td>
+        <video width="800" height="600" controls>
+          <source src="video/movie.mp4" type="video/mp4">
+          <source src="video/movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </td>
+      <td class="gfont2">
+        <h2 class="gfont2">For this creative video I added controls as well as file system management to make it work.</h2>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+<ul class="fontcol">
+  <li>3 colors/textures: (Paper Background, Denim Background, Red Borders)</li>
+  <li>3 google fonts: (Kodchasan, Poor Story, W3-Center)</li>
+  <li>Table Dropshadow: (Red Border w/ Red Dropshadow)</li>
+  <li>Explainations: (4 [2 top], [2 bot])</li>
+</ul>
+</html>

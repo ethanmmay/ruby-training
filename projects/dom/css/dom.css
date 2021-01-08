@@ -1,0 +1,12 @@
+body {
+    background-image: url('../images/background.jpg');
+    color: white;
+}
+
+.gfont {
+    color: white;
+}
+
+#clockDisplay {
+    font-size: 50pt;
+}

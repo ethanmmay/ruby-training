@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Mukta|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <link rel="stylesheet" href="css/bar.css">
+    <script src="js/bar.js"></script>
+    <title>Bar Graph</title>
+</head>
+<body onload="init()">
+    <div>
+        <h2 class="gfont">Top Country by GDP (PPP)</h2>
+        <h2 class="gfont">Created By Ethan May, March 8, 2019</h2>
+        <ul>
+            <li class="gfont"><strong><a href=https://www.thebalance.com/what-is-gdp-definition-of-gross-domestic-product-3306038>Gross Domestic Product (GDP):</a></strong><br>The total value of everything produced in the 
+                country.<br> It doesn't matter if it's produced by citizens or foreigners. 
+                If they are located<br> within the country's boundaries, their production is 
+                included in GDP.</li><br>
+            <li class="gfont"><strong><a href=https://www.investopedia.com/updates/purchasing-power-parity-ppp/>Purchasing Power Parity (PPP):</a></strong><br> An economic theory that compares 
+                different countries' currencies through<br> a "basket of goods" approach. 
+                According to this concept, two currencies are in equilibrium<br> or at par 
+                when a basket of goods (taking into account the exchange rate) is 
+                <br>priced the same in both countries.</li><br>
+            
+            <li class="gfont"><strong><a href=https://www.thebalance.com/gross-national-income-4020738>Gross National Income (GNI):</a></strong> A measurement of a country's income.
+                <br>It includes all the income earned by a country's residents and businesses,
+                <br>including any income earned abroad. Income is defined as all employee
+                <br>compensation plus investment profits. It includes earnings from foreign sources.</li><br>
+        </ul>
+    <select id="country">
+        <option ">Choose A Country</option>
+        <option id="burundi">Burundi</option>
+        <option id="comoros">Comoros</option>
+        <option id="congo">Congo</option>
+        <option id="eritrea">Eritrea</option>
+        <option id="ethiopia">Ethiopia</option>
+        <option id="guinea">Guinea</option>
+        <option id="kiribati">Kiribati</option>
+        <option id="liberia">Liberia</option>
+        <option id="madagascar">Madagascar</option>
+        <option id="malawi">Malawi</option>
+        <option id="mali">Mali</option>
+        <option id="mozambique">Mozambique</option>
+        <option id="niger">Niger</option>
+        <option id="togo">Togo</option>
+        <option id="yemen">Yemen</option>
+    </select>
+    <input type="number" placeholder="Enter PPP" id="ppp"></input>
+    <button onclick="update()">Update Graph</button><br><br>
+    <canvas id="canvas" height="400" width="650"></canvas><br> 
+    </div>
+</body>
+</html>

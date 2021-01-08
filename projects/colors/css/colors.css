@@ -1,0 +1,21 @@
+body {
+    background-color: #dca1f7;
+}
+
+.floatLeft {
+  float: left;
+  padding: 25px;
+}
+
+.clearFloat {
+  clear: both;
+}
+
+hr {
+  border: 5px ridge #faa322;
+}
+
+.rubik {
+  font-family: 'Rubik', sans-serif;
+
+}
