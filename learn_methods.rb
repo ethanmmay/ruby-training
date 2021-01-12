@@ -1,9 +1,11 @@
 
-def greetUser(name)
-    puts ("Hello " + name)
+def greetUser(name, age)
+    puts ("Hello " + name + ", you are " + age + " years old.")
 end
 
-puts "Top"
-greetUser("Ethan")
-puts "Bottom"
-
+puts "What's your name?"
+nameInput = gets.chomp
+puts "How old are you?"
+ageInput = gets.chomp
+greetUser(nameInput, ageInput)
+puts "Program Finished"
