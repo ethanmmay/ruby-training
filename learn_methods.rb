@@ -1,6 +1,6 @@
 
 def greetUser(name, age)
-    puts ("Hello " + name + ", you are " + age + " years old.")
+    puts ("Hello " + name + ", you are " + age.to_s + " years old.")
 end
 
 puts "What's your name?"
