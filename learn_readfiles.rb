@@ -7,7 +7,4 @@ File.open("testfile.txt", "r") do |file|
         puts line
     end
     puts file.read().include? "text"
-
-
-
 end

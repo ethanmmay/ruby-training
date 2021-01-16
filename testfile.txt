@@ -1,3 +1,5 @@
-This is some text.
-This is also some text.
-The text in this file is for testing.
+names = [
+    "Dave",
+    "John",
+    "Mark"
+]
