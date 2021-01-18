@@ -1,5 +1,5 @@
-names = [
-    "Dave",
+friends = [ 
+ "Dave",
     "John",
     "Mark"
 ]
