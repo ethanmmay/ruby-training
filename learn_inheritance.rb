@@ -10,7 +10,20 @@ class Chef
     end
 end
 
+class ItalianChef < Chef
+    def makeSpecial
+        puts "The chef makes spaghetti"
+    end
+    def makePasta
+        puts "The chef makes pasta"
+    end
+end
 
+chef = Chef.new()
+chef.makeSpecial
+
+italian = ItalianChef.new
+italian.makeSpecial
 
 
 
